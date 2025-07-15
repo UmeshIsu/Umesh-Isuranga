@@ -40,6 +40,12 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -64,21 +70,42 @@ h1{
 .skills img{
     width: 30px;
     height: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.number a, .email a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.number a:hover, .email a:hover {
+    color: #0077cc;
+}
+.number a::after, .email a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #0077cc;
+    transition: width 0.3s ease;
+}
+.number a:hover::after, .email a:hover::after {
+    width: 100%;
 }
 .number{
     margin-top: 20px;
 }
-.number a {
-    text-decoration: none;
-    color: #333;
-}
+
 .email{
     margin-top: 10px;
 }
-.email a{
-    text-decoration: none;
-    color: #333;
-}
+
 
 .social-meadia{
     margin-top: 20px;
@@ -102,4 +129,10 @@ h1{
     display: flex;
     width: 40px;
     height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+}
+.li img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
